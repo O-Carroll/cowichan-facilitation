@@ -23,7 +23,8 @@ select <- dplyr::select
 # LOAD DATA: ####
 
 # Main data frame:
-data <- read_excel("2022_Final_Data/2022_Carroll_Cowichan.xlsx", na = "NA")
+data <- read_csv("2022_Carroll_Cowichan.csv",
+                 na = "NA")
 
 # Subset with only seed-producing phytometers (and removal of 1 influential outlier):
 phytoms <- data |> filter(foc.seed.stndrd > 0, 
